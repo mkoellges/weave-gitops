@@ -13,6 +13,7 @@ spec:
         kind: HelmRepository
         name: ww-gitops
   interval: 1m0s
+  targetNamespace: weave-gitops
   values:
     adminUser:
       create: true
