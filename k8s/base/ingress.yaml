@@ -1,0 +1,19 @@
+---
+# https://kubernetes.io/docs/concepts/services-networking/ingress/
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ww-gitops
+  namespace: weave-gitops
+spec:
+  rules:
+    - host: ww-gitops.mkoellges.guru
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: weave-gitops-ww-gitops
+                port:
+                  number: 9001
