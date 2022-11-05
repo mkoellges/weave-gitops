@@ -20,6 +20,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: kube-prometheus-stack-grafana
+                name: weave-gitops-ww-gitops
                 port:
-                  number: 80
+                  number: 9001
